@@ -1,0 +1,31 @@
+
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# dotenv files
+.env
+.env.*.local
+
+# system files
+.DS_Store
+Thumbs.db
+
+# coverage reports
+coverage/
+
+# compiled files
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+
+#Test , map
+test/
+map/
