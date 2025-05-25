@@ -9,9 +9,9 @@ const checkRole = require('../Middlewares/check_role_middleware')
 route.get('/',productsController.getProducts);
 route.get('/:id',ValidateId,productsController.getProduct);
 //*manager only
-route.post('/add',authenticateUser,checkRole("manager"),validateProductsInfoMiddleware,productsController.addProduct);
-route.put('/update/:id',authenticateUser,checkRole("manager"),validateUUID,validateUpdateProductsMiddleware,productsController.updateProduct);
-route.delete('/delete/:id',authenticateUser,checkRole("manager"),validateUUID,productsController.deleteProduct)
+route.post('/',authenticateUser,checkRole("manager"),validateProductsInfoMiddleware,productsController.addProduct);
+route.put('/:id',authenticateUser,checkRole("manager"),validateUUID,validateUpdateProductsMiddleware,productsController.updateProduct);
+route.delete('/:id',authenticateUser,checkRole("manager"),validateUUID,productsController.deleteProduct)
 
 
 
