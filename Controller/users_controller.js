@@ -93,7 +93,7 @@ const updateInfo = tryCatchHandler(async (req, res) => {
   if(newPassword){
     const salt = parseInt(process.env.SALT_ROUND);
     const hashedPass = await bcrypt.hash(newPassword,salt);
-    updatedFields.newPassword = hashedPass;
+    updatedFields.password = hashedPass;
     
   }
   if(Object.keys(updatedFields).length === 0){
