@@ -81,7 +81,7 @@ class UsersModel{
         }
 
     }
-
+ 
 
     static updateInfo = async(userId , updatedFields)=>{
         try { 
